@@ -7,4 +7,9 @@ jobs:
   Testing:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - name: Set up Go
+        uses: actions/setup-go@v1
+      - run: go build ./sample.go
+      - run: ls -la
       - run: ./sample
