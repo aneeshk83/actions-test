@@ -8,4 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run a long running process
-        run: yes "HelloWorld"
+        run: |
+          yes helloooworld
+          for sig in 1 2 3 6 9 14 15; do
+          trap 'echo "caught signal '$sig'..."' $sig
+          done
+        
