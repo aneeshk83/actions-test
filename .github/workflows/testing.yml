@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Run a long running process
         run: |
-          yes helloooworld
+          sleep 300
           for sig in 1 2 3 6 9 14 15; do
           trap 'echo "caught signal '$sig'..."' $sig
           done
